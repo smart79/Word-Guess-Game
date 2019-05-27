@@ -149,7 +149,7 @@ document.onkeydown = function(event) {
     } else {
         // Check to make sure a-z was pressed.
         if(event.keyCode >= 65 && event.keyCode <= 90) {
-            keySound.play();
+            // keySound.play();
             makeGuess(event.key.toUpperCase());
             updateDisplay();
             checkWin();
