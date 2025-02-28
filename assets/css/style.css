@@ -3,7 +3,7 @@ body {
     background-color: #eee;
     padding-top: 20px;
     font-family: Courier New, Courier, monospace;
-    color: white;
+    color: rgb(207, 248, 60);
     text-shadow: 0 0 2px black, -1px -1px 2px black, 1px 0 2px black, 1px 1px 2px black;
     /*background: url('../images/bgimage.png') no-repeat;*/
     background-size: cover;
@@ -31,7 +31,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     padding: 5px;
-    background-color: rgba(12,51,114,.6);
+    background-color:none;
 }
 
 #title-image {
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .gameplay-column {
     padding: 20px;
-    border: 3px dashed #fff;
+    border: 3px thin #111111;
     text-align: center;
     margin-top: 20px;
     min-height: 500px;
