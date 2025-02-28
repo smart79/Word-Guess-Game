@@ -2,20 +2,20 @@
 
 var selectableWords =           // Word list
     [
-        "PLUMBUS",
-        "SCHLEEB",
-        "PORTAL",
-        "PICKLE",
-        "CITADEL",
-        "BETH",
-        "RICK",
-        "SQUANCH",
-        "CRONENBERG",
-        "MORTY",
-        "POOPIEBUTTHOLE",
-        "JERRY",
-        "SUMMER",
-        "VINDICATORS",
+        "ECLIPTIC",
+        "PULSAR",
+        "SUPERNOVA",
+        "WORMHOLE",
+        "NEUTRON",
+        "ORBIT",
+        "LUNAR",
+        "GRAVITRON",
+        "CRCHRONOSPHERE",
+        "SOLAR",
+        "DARKMATTER",
+        "QUASAR",
+        "EVENTHORIZON",
+        "HELIOSPHERE",
     ];
 
 const maxTries = 10;            // Maximum number of tries player has
