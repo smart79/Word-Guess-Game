@@ -143,9 +143,13 @@ function makeGuess(letter) {
 document.querySelectorAll('.key').forEach(button => {
     button.addEventListener('click', function() {
         let letter = this.getAttribute('data-key');
-        document.dispatchEvent(new KeyboardEvent('keydown', { key: letter }));
+        makeGuess(letter); // This correctly processes the letter guess
+        updateDisplay();
+        checkWin();
+        checkLoss();
     });
 });
+
 
 // Event listener
 document.onkeydown = function(event) {
