@@ -139,6 +139,13 @@ function makeGuess(letter) {
     
 };
 
+// Event listener for on-screen keyboard
+document.querySelectorAll('.key').forEach(button => {
+    button.addEventListener('click', function() {
+        let letter = this.getAttribute('data-key');
+        document.dispatchEvent(new KeyboardEvent('keydown', { key: letter }));
+    });
+});
 
 // Event listener
 document.onkeydown = function(event) {
