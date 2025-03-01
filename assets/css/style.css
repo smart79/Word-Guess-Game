@@ -75,6 +75,39 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 300px;
 }
 
+#mobile-keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.key {
+    padding: 10px;
+    margin: 3px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.key:hover {
+    background-color: #555;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .gameplay-column {
@@ -109,3 +142,63 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 80%;
     }
 }
+@media (max-width: 768px) {
+    .gameplay-column {
+        width: 100%;
+        min-height: auto;
+        padding: 10px;
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 90%;
+        padding: 3px;
+    }
+
+    /* Make the keyboard buttons larger for touchscreens */
+    #mobile-keyboard {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .keyboard-row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .key {
+        width: 12%; /* Adjust button width for better spacing */
+        height: 50px;
+        font-size: 20px;
+        margin: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    #title-image {
+        height: auto;
+        max-width: 80%;
+    }
+    
+    #hangmanImage {
+        max-width: 80%;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 80%;
+    }
+
+    /* Make the keyboard more compact on very small screens */
+    .key {
+        width: 15%;
+        height: 45px;
+        font-size: 18px;
+    }
+}
+
