@@ -143,6 +143,7 @@ function makeGuess(letter) {
 document.querySelectorAll('.key').forEach(button => {
     button.addEventListener('click', function() {
         let letter = this.getAttribute('data-key');
+        console.log("Button Clicked:", letter); // Debugging line to check button presses
         makeGuess(letter); // This correctly processes the letter guess
         updateDisplay();
         checkWin();
