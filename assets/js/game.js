@@ -129,6 +129,7 @@ function checkLoss()
 
 // Makes a guess
 function makeGuess(letter) {
+    console.log("makeGuess() called with letter:", letter); // Debugging line
     if (remainingGuesses > 0) {
         // Make sure we didn't use this letter yet
         if (guessedLetters.indexOf(letter) === -1) {
@@ -140,17 +141,18 @@ function makeGuess(letter) {
 };
 
 // Event listener for on-screen keyboard
-document.querySelectorAll('.key').forEach(button => {
-    button.addEventListener('click', function() {
-        let letter = this.getAttribute('data-key');
-        console.log("Button Clicked:", letter); // Debugging line to check button presses
-        makeGuess(letter); // This correctly processes the letter guess
-        updateDisplay();
-        checkWin();
-        checkLoss();
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.key').forEach(button => {
+        button.addEventListener('click', function() {
+            let letter = this.getAttribute('data-key');
+            console.log("Button Clicked:", letter); // Debugging line to check button presses
+            makeGuess(letter); // This correctly processes the letter guess
+            updateDisplay();
+            checkWin();
+            checkLoss();
+        });
     });
 });
-
 
 // Event listener
 document.onkeydown = function(event) {
