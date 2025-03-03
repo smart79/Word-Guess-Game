@@ -117,15 +117,14 @@ function checkWin() {
 
 
 // Checks for a loss
-function checkLoss()
-{
+function checkLoss() {
     if(remainingGuesses <= 0) {
         loseSound.play();
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
         hasFinished = true;
     }
-}
+};
 
 // Makes a guess
 function makeGuess(letter) {
