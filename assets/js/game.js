@@ -159,14 +159,15 @@ document.onkeydown = function(event) {
     if(hasFinished) {
         resetGame();
         hasFinished = false;
-    } else {
-        // Check to make sure a-z was pressed.
-        if(event.keyCode >= 65 && event.keyCode <= 90) {
-            // keySound.play();
-            makeGuess(event.key.toUpperCase());
-            updateDisplay();
-            checkWin();
-            checkLoss();
-        }
+        return
+    }
+    
+    // Check to make sure a-z was pressed.
+    if(event.keyCode >= 65 && event.keyCode <= 90) {
+        // keySound.play();
+        makeGuess(event.key.toUpperCase());
+        updateDisplay();
+        checkWin();
+        checkLoss();
     }
 };
