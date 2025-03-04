@@ -1,5 +1,9 @@
 'use strict';
 
+var winSound = new Audio("assets/sounds/win.mp3"); // Replace with the correct path
+var loseSound = new Audio("assets/sounds/lose.mp3"); // Replace with the correct path
+
+
 var selectableWords =           // Word list
     [
         "ECLIPTIC",
