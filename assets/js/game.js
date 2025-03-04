@@ -139,11 +139,18 @@ function makeGuess(letter) {
     
 };
 
-// Event listener for on-screen keyboard
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.key').forEach(button => {
         button.addEventListener('click', function() {
             let letter = this.getAttribute('data-key');
+            
+            // If the game is finished, reset before making a guess
+            if (hasFinished) {
+                resetGame();
+                hasFinished = false;
+                return; // Stop further processing after reset
+            }
+
             console.log("Button Clicked:", letter); // Debugging line to check button presses
             makeGuess(letter); // This correctly processes the letter guess
             updateDisplay();
@@ -153,18 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Event listener
 document.onkeydown = function(event) {
-    // If we finished a game, dump one keystroke and reset.
-    if(hasFinished) {
+    // If the game has finished, reset the game on any key press
+    if (hasFinished) {
         resetGame();
         hasFinished = false;
-        return
+        return;
     }
-    
-    // Check to make sure a-z was pressed.
-    if(event.keyCode >= 65 && event.keyCode <= 90) {
-        // keySound.play();
+
+    // Check to make sure A-Z was pressed
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
         makeGuess(event.key.toUpperCase());
         updateDisplay();
         checkWin();
