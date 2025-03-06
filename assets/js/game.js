@@ -1,7 +1,8 @@
 'use strict';
 
-var winSound = new Audio("assets/sounds/win.mp3"); // Replace with the correct path
-var loseSound = new Audio("assets/sounds/lose.mp3"); // Replace with the correct path
+var gameMusic = document.getElementById("gameMusic");
+var winSound = new Audio("assets/sounds/win.mp3");
+var loseSound = new Audio("assets/sounds/lose.mp3");
 
 
 var selectableWords =           // Word list
@@ -58,6 +59,8 @@ console.log()
 
     // Show display
     updateDisplay();
+    // Start playing the game music
+    gameMusic.play();
 };
 
 //  Updates the display on the HTML Page
