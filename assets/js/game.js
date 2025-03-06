@@ -1,8 +1,23 @@
 'use strict';
 
-var gameMusic = document.getElementById("gameMusic");
+//var gameMusic = document.getElementById("gameMusic");
 var winSound = new Audio("assets/sounds/win.mp3");
 var loseSound = new Audio("assets/sounds/lose.mp3");
+
+var gameMusic;
+document.addEventListener("DOMContentLoaded", function() {
+    gameMusic = document.getElementById("gameMusic");
+
+    if (gameMusic) {
+        gameMusic.volume = 0.5; // Adjust volume level
+        gameMusic.loop = true;  // Ensure looping
+        gameMusic.play().catch(error => {
+            console.log("Autoplay blocked. Waiting for user interaction.");
+        });
+    } else {
+        console.error("gameMusic element not found.");
+    }
+});
 
 
 var selectableWords =           // Word list
@@ -60,7 +75,11 @@ console.log()
     // Show display
     updateDisplay();
     // Start playing the game music
-    gameMusic.play();
+    if (gameMusic) {
+        gameMusic.currentTime = 0; // Restart the music from the beginning
+        gameMusic.play().catch(error => console.log("Autoplay blocked"));
+    }
+    
 };
 
 //  Updates the display on the HTML Page
