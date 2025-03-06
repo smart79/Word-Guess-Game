@@ -1,23 +1,34 @@
 'use strict';
 
-//var gameMusic = document.getElementById("gameMusic");
+
+'use strict';
+
+var gameMusic;  // Global variable
 var winSound = new Audio("assets/sounds/win.mp3");
 var loseSound = new Audio("assets/sounds/lose.mp3");
 
-var gameMusic;
 document.addEventListener("DOMContentLoaded", function() {
-    gameMusic = document.getElementById("gameMusic");
+    gameMusic = document.getElementById("gameMusic"); //  REMOVE 'var' to use global variable
 
     if (gameMusic) {
         gameMusic.volume = 0.5; // Adjust volume level
         gameMusic.loop = true;  // Ensure looping
+
         gameMusic.play().catch(error => {
             console.log("Autoplay blocked. Waiting for user interaction.");
         });
+
+        //  Fix for autoplay issues: Play when user interacts
+        document.body.addEventListener("click", function () {
+            if (gameMusic && gameMusic.paused) {
+                gameMusic.play().catch(error => console.log("User interaction required to play music."));
+            }
+        }, { once: true }); // Ensures it only runs once
     } else {
         console.error("gameMusic element not found.");
     }
 });
+
 
 
 var selectableWords =           // Word list
