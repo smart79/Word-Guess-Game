@@ -33,6 +33,18 @@ body {
 h1, h2, h3, h4, h5, h6 {
     padding: 5px;
     background-color:none;
+}/* Ensure all headings are bold, large, and visible */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    font-size: 1.8rem; /* Adjust for visibility */
+    color: white;
+    text-shadow: 2px 2px 5px black; /* Improves contrast */
+}
+
+/* Specific IDs for better emphasis */
+#totalWins, #currentWord, #remainingGuesses, #guessedLetters {
+    font-size: 2rem; /* Makes key game info bigger */
+    font-weight: bold;
 }
 
 #title-image {
