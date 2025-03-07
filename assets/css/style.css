@@ -44,7 +44,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #currentWord {
+    font-size: 2rem; /* Increases font size */
+    font-weight: bold;
     letter-spacing: 5px;
+    text-transform: uppercase; /* Ensures uppercase letters */
+    color: white;
+}
+
+#guessedLetters {
+    font-size: 1.5rem; /* Increases font size for guessed letters */
+    font-weight: bold; /* Makes guessed letters bold */
+    color: yellow; /* Makes guessed letters stand out */
+}
+
+#remainingGuesses {
+    font-size: 1.5rem; /* Increases font size */
+    font-weight: bold; /* Makes text bold */
+    color: red; /* Highlights remaining guesses */
 }
 
 #pressKeyTryAgain, 
