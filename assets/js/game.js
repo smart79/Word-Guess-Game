@@ -41,7 +41,7 @@ var selectableWords =           // Word list
         "ORBIT",
         "LUNAR",
         "GRAVITRON",
-        "CRCHRONOSPHERE",
+        "CHRONOSPHERE",
         "SOLAR",
         "DARKMATTER",
         "QUASAR",
@@ -72,7 +72,7 @@ function resetGame() {
 
     // Make sure the hangman image is cleared
     document.getElementById("hangmanImage").src = "";
-console.log()
+console.log();
     // Build the guessing word and clear it out
     for (var i = 0; i < selectableWords[currentWordIndex].length; i++) {
         guessingWord.push("_");
@@ -144,6 +144,8 @@ function evaluateGuess(letter) {
 // Checks for a win by seeing if there are any remaining underscores in the guessingword we are building.
 function checkWin() {
     if(guessingWord.indexOf("_") === -1) {
+        gameMusic.pause();
+        gameMusic.currentTime = 0;
         document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText= "display: block";
         wins++;
@@ -156,6 +158,8 @@ function checkWin() {
 // Checks for a loss
 function checkLoss() {
     if(remainingGuesses <= 0) {
+        gameMusic.pause();
+        gameMusic.currentTime = 0;
         loseSound.play();
         document.getElementById("gameover-image").style.cssText = "display: block";
         document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
