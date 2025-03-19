@@ -9,7 +9,7 @@
 ## 📌 Overview
 
 **Stellar Word Quest** is an interactive browser-based word-guessing game inspired by classic **Hangman** but set in the cosmos.  
-Players guess **letters from A-Z** to reveal space-related words before running out of attempts.
+Players guess **letters from A-Z** to reveal space-related words before running out of attempts to save your planet before it explodes.
 
 The game includes:  
 ✔ **Dynamic UI updates** with DOM manipulation.  
@@ -22,7 +22,27 @@ The game includes:
 
 ## 🚀 **Live Demo**
 
-Try the game here: **[Play Now](#)** _(Replace with actual deployed link)_
+Try the game here: **[Play Now](#)** _(https://smart79.github.io/Word-Guess-Game/)_
+
+## 🎮 Game Flow
+
+1️⃣ Game Initialization
+
+    A random word is chosen from a predefined array.
+    The game resets all variables (e.g., guessed letters, remaining attempts).
+    The display updates dynamically to show blanks for unguessed letters.
+
+2️⃣ Letter Guessing Logic
+
+    User input (keyboard or button click) triggers a function.
+    If the letter is in the word, it updates the display.
+    If incorrect, the remaining attempts decrease, and the hangman image updates.
+
+3️⃣ Win/Loss Conditions
+
+    Win Condition: If all letters are guessed correctly, the win screen displays and you land on your new planet to see where it is in evolution.
+    Lose Condition: If attempts reach zero, the lose screen displays and your world explodes.
+    Game Music Handling: Music stops on win/loss, and sound effects play.
 
 ---
 
@@ -78,26 +98,6 @@ Audio Integration – Background music, win/loss sounds.
 ✔ Sound Effects – Immersive win/loss music and game music.
 ✔ Game Reset on Win/Loss – Keeps game play fluid.
 ✔ Win & Lose Screens – Visual feedback on success or failure.
-
-## 🔍 Core Algorithms & Game Flow
-
-1️⃣ Game Initialization
-
-    A random word is chosen from a predefined array.
-    The game resets all variables (e.g., guessed letters, remaining attempts).
-    The display updates dynamically to show blanks for unguessed letters.
-
-2️⃣ Letter Guessing Logic
-
-    User input (keyboard or button click) triggers a function.
-    If the letter is in the word, it updates the display.
-    If incorrect, the remaining attempts decrease, and the hangman image updates.
-
-3️⃣ Win/Loss Conditions
-
-    Win Condition: If all letters are guessed correctly, the win screen displays.
-    Lose Condition: If attempts reach zero, the lose screen displays.
-    Game Music Handling: Music stops on win/loss, and sound effects play.
 
 ## 🔮 Future Enhancements
 
